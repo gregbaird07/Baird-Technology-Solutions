@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REYNOLDS2004 March Madness Stats</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("usa_today_9943404.0.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("March-Madness.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("bracket.jpg");
+  min-height: 400px;
+}
+.bgimg-4 {
+  background-image: url("ncb_ncaa_tournament_17.jpg");
+  min-height: 400px;
+}
+
+.bgimg-5 {
+  background-image: url("ncb_ncaa_tournament_19.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+.charts { text-align: center;}
+#piechart, #barchart, #table_div1{ 
+    width: 900px; 
+    height: 500px;
+    width: 50%;
+    margin: 0 auto;
+    }
+#table_div1  {
+    height: 1200px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+    .charts { width: 100%;}
+
+    #piechart, #barchart, #table_div1 { 
+    width: 350px; 
+    height: 250px; 
+
+    }
+    #table_div1 {
+        height: 1500px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">Happy March Madness Everyone.
+        There are some interesting stats about our league below.
+        Scroll Down to see more!!!
+    </span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;">
+  <h3 style="text-align:center;">Reynolds2004</h3>
+  <!-- <div class="charts"><img class="charts" src="chart.png"></div>-->
+  <div class="gcharts" id="barchart"></div>
+  <p style="text-align:center">WooHoo! We sure love our March Madness! <br>In 2004, we had just 12 players. In 2016 we had a record 38! <br>If you didn't know, 
+      you are encouraged to have more than one bracket in our challenge. Your pick will be marked with your name followed by a (1 or 2). Making your odds of becoming a winner better and adding to the
+      fun!
+  </p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border">YOU ARE PRETTY GOOD AT PICKING THE WINNING TEAM!</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 15px;text-align: justify;">
+        <h3 style="text-align:center;color:white;">We've done it 64% of the time!</h3> 
+        <div class="charts"><img src="Capture.png"></div>
+    <p style="text-align:center">Over the 14 years we've had 42 people pick the winner. That is enough that I think I'd categorize it as a win.</p>
+    <div class="charts"><img class="charts" src="Capture2.png"></div>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border">You are also good at picking correct game winners.</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+        <div style="color: #777;background-color:white;">
+        <h3 style="text-align:center;">
+            In 14 years there have been 19,467 picks made. Of those pick you correctly guessed 11,595 game winners. That's 59.56% correct.
+        </h3>
+        <div id="piechart" class="gchart"></div>
+    <p style="text-align: center;">Yes, 
+        in school that is bad. But here it's great!!!!
+    </p>
+  </div>
+</div>
+
+<div class="bgimg-4">
+        <div class="caption">
+          <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WHO ARE OUR ALL TIME PICKERS???</span>
+        </div>
+      </div>
+      
+      <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding-top: 20px;">
+            <p>Wow. There is a lot here. Just keep in mind that we are all good at something!!!
+                <br>(Note: You can click on the headers and sort. Keep clicking and you can reverse sort)</p>
+          <div id="table_div1" style="color: black;"></div>
+
+        </div>
+      </div>
+
+<div class="bgimg-5">
+    <div class="caption">
+        <span class="border">
+            AND FINALLY THE CHAMPIONS CIRCLE
+        </span>
+    </div>
+</div>
+          
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding-top: 20px;">
+            <h3 style="text-align:center;color:white;">We've had</h3>
+            <h3 style="text-align:center;color:white;">11 Different Winners</h3> 
+            <div class="charts"><img src="Capture3.png"></div>
+            <h3 style="text-align:center;color:white;">AND...</h3>
+            <h3 style="text-align:center;color:white;">3 REPEAT WINNERS</h3>
+            <h3 style="text-align:center;color:white;">AMY DOBSON	2010, 2011</h3>
+            <h3 style="text-align:center;color:white;">KELLY HEET	2008, 2012</h3>
+            <h3 style="text-align:center;color:white;">GREG BAIRD	2007, 2013</h3>
+            <img src="giphy-downsized.gif">
+
+
+        
+    </div>
+</div>
+    
+
+
+<div class="bgimg-1">
+  <div class="caption">
+    <div></div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Correct',     11595],
+      ['Incorrect',      7872]
+    ]);
+
+    var options = {
+      title: 'Total Picks Breakdown'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+
+     google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Year', 'Players'],
+          ['2004', 12],
+          ['2005', 20],
+          ['2006', 17],
+          ['2007', 16],
+          ['2008', 20],
+          ['2009', 23],
+          ['2010', 26],
+          ['2011', 19],
+          ['2012', 18],
+          ['2013', 16],
+          ['2014', 25],
+          ['2015', 29],
+          ['2016', 38],
+          ['2017', 30]
+        ]);
+
+        var options = {
+          // width: 800,
+          legend: { position: 'none' },
+          trendlines: { 1: {} },
+          chart: {
+            
+            title: 'Number of Players over the years',
+            subtitle: 'March Madness is awesome!' },
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Our PLayers'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+          
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+  }
+</script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['table']});
+    google.charts.setOnLoadCallback(drawTable);
+
+    function drawTable() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Name');
+      data.addColumn('number', 'Total Correct');
+      data.addColumn('number', 'Avg. Correct');
+      data.addColumn('number', 'Lifetime %');
+      data.addRows([
+['Laura Cook',	87,	43.50,	69.05],
+['Amy Dobson',	241,	40.17,	63.76],
+['Joey Heet',	358, 39.78,	63.14],
+['Carmela St. John',	79,	39.50,	62.70],
+['Aunt Susan',	750,	39.47,	62.66],
+['Paul Chuzi',	513,	39.46,	62.64],
+['Mary Chuzi',	472,	39.33,	62.43],
+['Joe Reynolds',	664,	39.06,	62.00],
+['Nic St. John',	156, 39.00,	61.90],
+['Grace Heet',	117,	39.00,	61.90],
+['Jody Reynolds',	539,	38.50,	61.11],
+['Marc Watsons',	231,	38.50,  61.11],
+['Susan Reynolds',	421,	38.27,	60.75],
+['Greg Baird',	646,	38.00,	60.32],
+['Tracy Reynolds',	642,	37.76,	59.94],
+['Adam Watson',	113,	37.67,	59.79],
+['Noah Watson',	600,	37.50,	59.52],
+['Jen Baird',	637,	37.47,	59.48],
+['Cam Baird',	557,	37.13,	58.94],
+['Steve St. John',	371,	37.10,	58.89],
+['Brian Huelsmann',	37,	37.00,	58.73],
+['s finestack',	110,	36.67,	58.20],
+['Sharon Zim',	219,	36.50,	57.94],
+['Shannon St John',	36,	36.00,	57.14],
+['Mike Baird',	215,	35.83,	56.88],
+['Maddie Fels',	245,	35.00,	55.56],
+['Louis St John',	70,	35.00,	55.56],
+['Ben McNutt',	35,	35.00,	55.56],
+['Kelly Heet',	664,	34.95,	55.47],
+['Lizbeth Finestack',	139,	34.75,	55.16],
+['Steve Cook',	104,	34.67,	55.03],
+['Ortensia Caputo',	68,	34.00,	53.97],
+['Liz Fels',	235,	33.57,	53.29],
+['Chelsea Baird',	436,	33.54,	53.24],
+['Craig Fels',	99,	33.00,	52.38],
+['Michael Porterfield',	33,	33.00,	52.38],
+['Gayle Van Dyke',	60,	30.00,	47.62],
+['Jack Fels',	101,	25.25,	40.08]
+
+      ]);
+
+      var table = new google.visualization.Table(document.getElementById('table_div1'));
+
+      table.draw(data, {showRowNumber: false, width: '100%'});
+    }
+  </script>
+</body>
+</html>
